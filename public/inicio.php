@@ -1,17 +1,3 @@
-<?php
-
-use Database\Database;
-
-require_once "../src/model/Database.php";
-$db = new Database();
-
-// $db->insert(
-//     "INSERT INTO usuarios(nome, email, senha)
-//     VALUES('Paulo' , 'paulo.andre@ibest.com' , '1234');"
-// );
-
-?>
-
 <?php require_once "../src/views/header.php"; ?>
 
         <div class="login-center">
