@@ -20,7 +20,7 @@ $resultDb = $db->select(
 //var_dump($resultDb);
 ?>
 
-<form method="post" action="../src/banco/atualiza_pedido.php" >
+<form method="post" action="../banco/atualiza_pedido.php" >
     <h2>Atualização do pedido</h2>
     <br>
     <h4>Código:</h4>

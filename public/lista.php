@@ -35,14 +35,28 @@ $resultDb = $db->select(
                <td> <?= $linha->pag ?> </td>
                <td> <?= $linha->local ?> </td>
                <td>
-                   <a href="../public/atualiza.php?cod=<?= $linha->cod ?>" >Editar</a>
+                    <a href="../public/atualiza.php?cod=<?= $linha->cod ?>" >
+                        <img src="../public/assets/img/pen.svg" alt="Editar">
+                    </a>
                </td>
                <td>
-                   <a href="../public/apaga.php?cod=<?= $linha->cod ?>" >Apagar</a>
+                    <a onclick="confirmaDelete(<?= $linha->cod ?>);">
+                        <i class="bi bi-trash2"></i>
+                    </a>
                </td>
            </tr> 
         <?php endforeach; ?>
     </tbody>
 </table>
+
+<script>
+    function confirmaDelete(id) {
+        if( confirm("Deseja excluir o pedido "+id+"?") ) {
+            window.location.href='../banco/apaga_pedido.php?cod='+id;
+        } else {
+            alert('Exclusão cancelada!');
+        }
+    }
+</script>
 
 <?php require_once "../src/views/footer.php"; ?>
